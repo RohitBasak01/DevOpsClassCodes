@@ -166,8 +166,8 @@
   <executions>
     <execution>
       <goals>
-        <goal>instrument</goal>
-        <goal>check</goal>
+        <goal>instrument</goal>   <!-- Instrumentation of the code -->
+        <goal>check</goal>        <!-- Check for code coverage -->
       </goals>
       <phase>prepare-package</phase>  <!-- Ensures Cobertura runs before the packaging phase -->
     </execution>
@@ -176,9 +176,11 @@
     <formats>
       <format>xml</format>  <!-- This tells Cobertura to generate the XML report -->
     </formats>
-    <outputDirectory>${project.build.directory}/cobertura</outputDirectory>  <!-- Ensure this is set to 'target/cobertura' -->
+    <instrumentationDirectory>${project.build.directory}/instrumented</instrumentationDirectory> <!-- Updated to use a separate directory for instrumentation -->
+    <outputDirectory>${project.build.directory}/cobertura</outputDirectory>  <!-- Ensure the XML report is output in 'target/cobertura' -->
   </configuration>
 </plugin>
+
 
 
             <plugin>
