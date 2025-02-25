@@ -166,12 +166,20 @@
   <executions>
     <execution>
       <goals>
-        <goal>instrument</goal>   
-        <goal>check</goal>       <!-- Change 'coverage' to 'check' -->
+        <goal>instrument</goal>
+        <goal>check</goal>
       </goals>
+      <phase>prepare-package</phase>  <!-- Ensures Cobertura runs before the packaging phase -->
     </execution>
   </executions>
+  <configuration>
+    <formats>
+      <format>xml</format>  <!-- This tells Cobertura to generate the XML report -->
+    </formats>
+    <outputDirectory>${project.build.directory}/cobertura</outputDirectory>  <!-- Ensure this is set to 'target/cobertura' -->
+  </configuration>
 </plugin>
+
 
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
