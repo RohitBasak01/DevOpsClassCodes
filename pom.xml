@@ -423,17 +423,17 @@
             <reporting>
                 <plugins>
                     <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>cobertura-maven-plugin</artifactId>
-        <version>2.7</version>
-        <executions>
-            <execution>
-                <goals>
-                    <goal>instrument</goal>       <!-- Instrumentation of classes -->
-                    <goal>coverage</goal>         <!-- Generating coverage report -->
-                </goals>
-            </execution>
-        </executions>
+      <groupId>org.codehaus.mojo</groupId>
+      <artifactId>cobertura-maven-plugin</artifactId>
+      <version>2.7</version>
+      <executions>
+        <execution>
+          <goals>
+            <goal>instrument</goal>     <!-- Instrumentation of classes -->
+            <goal>coverage</goal>       <!-- Generating coverage report -->
+          </goals>
+        </execution>
+      </executions>
     </plugin>
                     <plugin>
                         <groupId>org.apache.maven.plugins</groupId>
