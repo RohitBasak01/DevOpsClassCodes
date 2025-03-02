@@ -176,10 +176,12 @@
     <formats>
       <format>xml</format>  <!-- This tells Cobertura to generate the XML report -->
     </formats>
-    <instrumentationDirectory>${project.build.directory}/instrumented</instrumentationDirectory> <!-- Updated to use a separate directory for instrumentation -->
-    <outputDirectory>${project.build.directory}/cobertura</outputDirectory>  <!-- Ensure the XML report is output in 'target/cobertura' -->
+    <instrumentationDirectory>${project.build.directory}/instrumented</instrumentationDirectory> <!-- Separate directory for instrumented classes -->
+    <outputDirectory>${project.build.directory}/cobertura</outputDirectory>  <!-- Directory for Cobertura reports -->
+    <sourceEncoding>UTF-8</sourceEncoding>  <!-- Explicitly set source encoding -->
   </configuration>
 </plugin>
+
 
 
 
